@@ -1,0 +1,52 @@
+@import "variables.scss";
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container.pokedex-container{
+  display: flex;
+  padding: 2rem;
+  width: 70vw;
+}
+
+.panel.pokedex-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-block.pokedex-content {
+  flex-grow: 2;
+}
+
+.panel-block.pokedex-footer {
+  line-height: 1.25;
+  padding: 0.75e 1emm;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokeball {
+  height: 100%;
+  img {
+    height: 100%;
+  }
+}
+
+.field.has-addons {
+  width: 100%;
+}
+
+.bg-red {
+  background-color: $red;
+  color: $grey;
+}
+
+.bg-grey {
+  background-color: $grey;
+}

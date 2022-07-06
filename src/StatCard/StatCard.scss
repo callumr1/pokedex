@@ -1,0 +1,11 @@
+.statbar-label-container {
+    display: flex;
+
+    .field-label.has-text-left{
+        margin-left: 0.5rem;
+    }
+
+    .field-label.has-text-right{
+        margin-right: 0.5rem;
+    }
+}

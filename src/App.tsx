@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './App.scss';
 import pokeball from './images/pokeball.svg';
-import { Container, Form, Button, Image, Panel, Card } from 'react-bulma-components';
+import { Container, Form, Button, Image, Panel, Card, Box, Progress, Columns } from 'react-bulma-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Pokemon, PokemonClient } from 'pokenode-ts';
+import { Pokemon, PokemonClient, PokemonStat } from 'pokenode-ts';
+import PokemonStatCard from './StatCard/StatCard';
 
 function App() {
 
@@ -60,17 +61,24 @@ function App() {
 function PokemonCard(pokemon: Pokemon){
   console.log(pokemon);
   return (
-    <Card>
+    <Card className='pokemon-card'>
       <Card.Header>
         <Card.Header.Title>{pokemon.name}</Card.Header.Title>
       </Card.Header>
-      <Card.Image src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Card.Image>
       <Card.Content>
-        
+        <Columns>
+          <Columns.Column>
+            <Image src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Image>
+          </Columns.Column>
+          <Columns.Column>
+            <PokemonStatCard {...pokemon.stats} />
+          </Columns.Column>
+        </Columns>
       </Card.Content>
     </Card>
     
   )
 }
+
 
 export default App;

@@ -1,10 +1,11 @@
 import { PokemonStat } from "pokenode-ts";
-import { Box, Container, Form, Progress } from "react-bulma-components";
+import { Box, Container, Form, Heading, Progress } from "react-bulma-components";
 import './StatCard.scss';
 
 function PokemonStatCard(pokeStats: PokemonStat[]){
     return (
       <Container>
+        <Heading subtitle>Base Stats</Heading>
         {pokeStats ? Object.keys(pokeStats).map(
           function(x: string){
             let stat = pokeStats[Number(x)];

@@ -5,7 +5,8 @@ import { Container, Form, Button, Image, Panel, Card, Box, Progress, Columns } f
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Pokemon, PokemonClient, PokemonStat } from 'pokenode-ts';
-import PokemonStatCard from './StatCard/StatCard';
+import PokemonStatCard from './components/StatCard/StatCard';
+import PokemonTypeTags from './components/TypeTags/TypeTags';
 
 function App() {
 
@@ -71,9 +72,11 @@ function PokemonCard(pokemon: Pokemon){
             <Image src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Image>
           </Columns.Column>
           <Columns.Column>
-            <PokemonStatCard {...pokemon.stats} />
+            <PokemonTypeTags {...pokemon.types} />
           </Columns.Column>
         </Columns>
+        <PokemonStatCard {...pokemon.stats} />
+        
       </Card.Content>
     </Card>
     

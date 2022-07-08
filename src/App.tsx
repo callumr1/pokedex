@@ -69,14 +69,14 @@ function PokemonCard(pokemon: Pokemon){
       <Card.Content>
         <Columns>
           <Columns.Column>
-            <Image src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Image>
-          </Columns.Column>
-          <Columns.Column>
+            <div className="pokemon-sprite-container">
+              <Image className="pokemon-sprite" src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Image>
+            </div>
+            
             <PokemonTypeTags {...pokemon.types} />
+            <PokemonStatCard {...pokemon.stats} />
           </Columns.Column>
         </Columns>
-        <PokemonStatCard {...pokemon.stats} />
-        
       </Card.Content>
     </Card>
     

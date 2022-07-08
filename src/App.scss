@@ -9,8 +9,10 @@
 
 .container.pokedex-container{
   display: flex;
-  padding: 2rem;
-  width: 70vw;
+  padding: 0.5rem;
+  width: 100vw;
+  max-width: 800px;
+  height: 100vh;
 }
 
 .panel.pokedex-body {
@@ -21,6 +23,7 @@
 
 .panel-block.pokedex-content {
   flex-grow: 2;
+  height: 70%
 }
 
 .panel-block.pokedex-footer {
@@ -41,6 +44,26 @@
 .card.pokemon-card {
   width: 100%;
   height: 100%;
+  .card-content{
+    overflow-y: scroll;
+    max-height: 90%;
+  }
+}
+
+.pokemon-sprite-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-sprite {
+  height: 100%;
+  width: 100%;
+  max-height: 300px;
+  max-width: 300px;
+  img {
+    max-height: 300px;
+    max-width: 300px;
+  }
 }
 
 .field.has-addons {

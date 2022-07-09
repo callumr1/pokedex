@@ -5,14 +5,13 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: $black;
 }
 
 .container.pokedex-container{
   display: flex;
   padding: 0.5rem;
   width: 100vw;
-  max-width: 800px;
+  max-width: 800px !important;
   height: 100vh;
 }
 

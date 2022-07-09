@@ -1,4 +1,4 @@
-import { Pokemon, PokemonClient } from "pokenode-ts";
+import { PokemonClient } from "pokenode-ts";
 
 export async function getPokemon(pokemon: string){
     const api = new PokemonClient();

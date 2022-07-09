@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.scss';
 import pokeball from './images/pokeball.svg';
-import { Container, Form, Button, Image, Panel, Card, Box, Progress, Columns } from 'react-bulma-components';
+import { Container, Form, Button, Image, Panel } from 'react-bulma-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { Pokemon, PokemonClient, PokemonStat } from 'pokenode-ts';
-import PokemonStatCard from './components/StatCard/StatCard';
-import PokemonTypeTags from './components/TypeTags/TypeTags';
-import PokemonSprite from './components/Sprite/Sprite';
-import PokemonBiometricTags from './components/BiometricTags/BiometricTags';
-import { capitalise } from './services/sharedUtils';
+import { Pokemon, PokemonClient } from 'pokenode-ts';
+import PokemonCard from './components/PokemonCard/PokemonCard';
 
 function App() {
 
@@ -61,35 +57,5 @@ function App() {
     </div>
   );
 }
-
-function PokemonCard(pokemon: Pokemon){
-  return (
-    <Card className='pokemon-card'>
-      <Card.Header>
-        <Card.Header.Title>{capitalise(pokemon.name)}</Card.Header.Title>
-      </Card.Header>
-      <Card.Content>
-        <Columns>
-          <Columns.Column>
-            <PokemonSprite {...pokemon.sprites} />
-          </Columns.Column>
-          <Columns.Column>
-            <PokemonStatCard {...pokemon.stats} />
-          </Columns.Column>
-        </Columns>
-        <Columns>
-          <Columns.Column>
-            <PokemonTypeTags {...pokemon.types} />
-          </Columns.Column>
-          <Columns.Column>
-            <PokemonBiometricTags {...pokemon} />
-          </Columns.Column>
-        </Columns>
-      </Card.Content>
-    </Card>
-    
-  )
-}
-
 
 export default App;

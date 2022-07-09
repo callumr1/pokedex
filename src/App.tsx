@@ -7,6 +7,9 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Pokemon, PokemonClient, PokemonStat } from 'pokenode-ts';
 import PokemonStatCard from './components/StatCard/StatCard';
 import PokemonTypeTags from './components/TypeTags/TypeTags';
+import PokemonSprite from './components/Sprite/Sprite';
+import PokemonBiometricTags from './components/BiometricTags/BiometricTags';
+import { capitalise } from './services/sharedUtils';
 
 function App() {
 
@@ -60,21 +63,26 @@ function App() {
 }
 
 function PokemonCard(pokemon: Pokemon){
-  console.log(pokemon);
   return (
     <Card className='pokemon-card'>
       <Card.Header>
-        <Card.Header.Title>{pokemon.name}</Card.Header.Title>
+        <Card.Header.Title>{capitalise(pokemon.name)}</Card.Header.Title>
       </Card.Header>
       <Card.Content>
         <Columns>
           <Columns.Column>
-            <div className="pokemon-sprite-container">
-              <Image className="pokemon-sprite" src={pokemon.sprites.front_default ? pokemon.sprites.front_default : ""}></Image>
-            </div>
-            
-            <PokemonTypeTags {...pokemon.types} />
+            <PokemonSprite {...pokemon.sprites} />
+          </Columns.Column>
+          <Columns.Column>
             <PokemonStatCard {...pokemon.stats} />
+          </Columns.Column>
+        </Columns>
+        <Columns>
+          <Columns.Column>
+            <PokemonTypeTags {...pokemon.types} />
+          </Columns.Column>
+          <Columns.Column>
+            <PokemonBiometricTags {...pokemon} />
           </Columns.Column>
         </Columns>
       </Card.Content>

@@ -2,3 +2,31 @@ $red-original:#ee1515;
 $black: #222224;
 $grey: #f0f0f0;
 $red: darken($red-original, 10%);
+
+// Stat bar colours
+$colour-hp: #C42624;
+$colour-atk: #FF970F;
+$colour-def: #164E6C;
+$colour-spd: #52B2CF;
+$colour-sp-atk: lighten($colour-atk, 10%);
+$colour-sp-def: lighten($colour-def, 10%);
+
+// Type colours
+$normal: #A8A77A;
+$fire: #EE8130;
+$water: #6390F0;
+$electric: #F7D02C;
+$grass: #7AC74C;
+$ice: #96D9D6;
+$fighting: #C22E28;
+$poison: #A33EA1;
+$ground: #E2BF65;
+$flying: #A98FF3;
+$psychic: #F95587;
+$bug: #A6B91A;
+$rock: #B6A136;
+$ghost: #735797;
+$dragon: #6F35FC;
+$dark: #705746;
+$steel: #B7B7CE;
+$fairy: #D685AD;

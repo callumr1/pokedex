@@ -1,10 +1,10 @@
 import { PokemonStat } from "pokenode-ts";
-import { Box, Container, Form, Heading, Progress } from "react-bulma-components";
+import { Container, Form, Heading, Progress } from "react-bulma-components";
 import './StatCard.scss';
 
 function PokemonStatCard(pokeStats: PokemonStat[]){
     return (
-      <Container>
+      <Container className="pokemon-stat-card">
         <Heading subtitle>Base Stats</Heading>
         {pokeStats ? Object.keys(pokeStats).map(
           function(x: string){
@@ -40,7 +40,7 @@ function PokemonStatCard(pokeStats: PokemonStat[]){
           <Form.Field.Label textAlign="left">{stat.stat.name}</Form.Field.Label>
           <Form.Field.Label textAlign="right">{stat.base_stat}/{maxValue}</Form.Field.Label>
         </div>
-        <Progress value={stat.base_stat} max={maxValue}></Progress>
+        <Progress className={stat.stat.name} value={stat.base_stat} max={maxValue}></Progress>
       </div>
     )
     

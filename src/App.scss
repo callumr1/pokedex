@@ -5,6 +5,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: $black;
 }
 
 .container.pokedex-container{
@@ -29,7 +30,7 @@
 .panel-block.pokedex-footer {
   line-height: 1.25;
   padding: 0.75e 1emm;
-  height: 120px;
+  max-height: 80px;
   display: flex;
   flex-direction: column;
 }
@@ -47,22 +48,6 @@
   .card-content{
     overflow-y: scroll;
     max-height: 90%;
-  }
-}
-
-.pokemon-sprite-container {
-  display: flex;
-  justify-content: center;
-}
-
-.pokemon-sprite {
-  height: 100%;
-  width: 100%;
-  max-height: 300px;
-  max-width: 300px;
-  img {
-    max-height: 300px;
-    max-width: 300px;
   }
 }
 

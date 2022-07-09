@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .statbar-label-container {
     display: flex;
     justify-content: space-between;
@@ -9,4 +11,34 @@
     .field-label.has-text-right{
         margin-right: 0.5rem;
     }
+}
+
+.pokemon-stat-card {
+    h1.subtitle {
+        margin-bottom: 0;
+    }
+}
+
+.progress.hp::-webkit-progress-value {
+    background-color: $colour-hp;
+}
+
+.progress.attack::-webkit-progress-value {
+    background-color: $colour-atk;
+}
+
+.progress.defense::-webkit-progress-value {
+    background-color: $colour-def;
+}
+
+.progress.special-attack::-webkit-progress-value {
+    background-color: $colour-sp-atk;
+}
+
+.progress.special-defense::-webkit-progress-value {
+    background-color: $colour-sp-def;
+}
+
+.progress.speed::-webkit-progress-value {
+    background-color: $colour-spd;
 }

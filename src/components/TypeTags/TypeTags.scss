@@ -1,4 +1,78 @@
+@import "../../variables.scss";
+
 .type-tags-container {
     display: flex;
     justify-content: space-around;
+
+    .normal {
+        background-color: $normal;
+    }
+
+    .fire {
+        background-color: $fire;
+    }
+
+    .water {
+        background-color: $water;
+    }
+    
+    .electric {
+        background-color: $electric;
+    }
+
+    .grass {
+        background-color: $grass;
+    }
+
+    .ice {
+        background-color: $ice;
+    }
+
+    .fighting {
+        background-color: $fighting;
+    }
+
+    .poison {
+        background-color: $poison;
+    }
+
+    .ground {
+        background-color: $ground;
+    }
+
+    .flying {
+        background-color: $flying;
+    }
+
+    .psychic {
+        background-color: $psychic;
+    }
+
+    .bug {
+        background-color: $bug;
+    }
+
+    .rock {
+        background-color: $rock;
+    }
+
+    .ghost {
+        background-color: $ghost;
+    }
+
+    .dragon {
+        background-color: $dragon;
+    }
+
+    .dark {
+        background-color: $dark;
+    }
+
+    .steel {
+        background-color: $steel;
+    }
+
+    .fairy {
+        background-color: $fairy;
+    }
 }

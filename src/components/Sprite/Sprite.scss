@@ -1,0 +1,15 @@
+.pokemon-sprite-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pokemon-sprite {
+    height: 100%;
+    width: 100%;
+    max-height: 300px;
+    max-width: 300px;
+    img {
+      max-height: 300px;
+      max-width: 300px;
+    }
+  }

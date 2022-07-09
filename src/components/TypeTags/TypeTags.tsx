@@ -1,9 +1,9 @@
 import { PokemonType } from "pokenode-ts";
 import { Container, Tag } from "react-bulma-components";
+import { capitalise } from "../../services/sharedUtils";
 import './TypeTags.scss';
 
 function PokemonTypeTags(pokeTypes: PokemonType[]){
-    console.log(pokeTypes);
     return (
         <Container className="type-tags-container">
             {pokeTypes ? Object.keys(pokeTypes).map(
@@ -18,8 +18,8 @@ function PokemonTypeTags(pokeTypes: PokemonType[]){
 
 function TypeTag(type: PokemonType){
     return (
-        <Tag size={'large'}>{type.type.name}</Tag>
+        <Tag className={type.type.name} size={'large'} rounded>{capitalise(type.type.name)}</Tag>
     )
 }
 
-export default PokemonTypeTags
+export default PokemonTypeTags;
